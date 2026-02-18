@@ -1,6 +1,6 @@
 # RAG Project
 
-A modular Retrieval-Augmented Generation (RAG) pipeline using LangChain, OpenAI, HuggingFace, and ChromaDB. This project enables you to build powerful question-answering and document retrieval systems over your own PDF/text data, with configurable LLMs, embeddings, and retrievers.
+A modular Retrieval-Augmented Generation (RAG) pipeline using LangChain, OpenAI, HuggingFace, and ChromaDB. This project enables you to build powerful question-answering and document retrieval systems over your own PDF/text data, with configurable LLMs, embeddings, and retrievers. It Also calculates the cost of each query based on the tokens used by the LLM and embeddings, giving you insights into your usage.
 
 ## Features
 - **Plug-and-play LLMs**: Use OpenAI or HuggingFace models
@@ -17,7 +17,7 @@ A modular Retrieval-Augmented Generation (RAG) pipeline using LangChain, OpenAI,
 # Clone the repo
 cd Rag_project
 python -m venv venv
-venv\Scripts\activate  # On Windows
+venv/Scripts/activate  # On Windows
 pip install -r requirements.txt
 ```
 
@@ -32,10 +32,10 @@ llm:
 embeddings:
   provider: openai   # huggingface | openai
   model_name: model-name
-  input_path: Rag_project/data/docs  # Path to your PDFs
+  input_path: data/docs  # Path to your PDFs
 vector_store:
   type: Chroma
-  persist_directory: Rag_project/data/docs
+  persist_directory: data/docs
 retriever:
   type: mmr
   top_k: 5
@@ -44,7 +44,7 @@ retriever:
 ```
 
 ### 3. Add Your Documents
-Place your PDF files in the folder specified by `embeddings.input_path` (default: `Rag_project/data/docs`).
+Place your PDF files in the folder specified by `embeddings.input_path` (default: `data/docs`).
 
 ### 4. Run the App
 ```bash
