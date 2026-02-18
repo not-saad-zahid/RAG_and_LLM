@@ -17,7 +17,7 @@ A modular Retrieval-Augmented Generation (RAG) pipeline using LangChain, OpenAI,
 # Clone the repo
 cd Rag_project
 python -m venv venv
-venv/Scripts/activate  # On Windows
+venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
