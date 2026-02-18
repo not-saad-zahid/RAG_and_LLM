@@ -1,0 +1,20 @@
+llm:
+  provider: openai   # huggingface | openai
+  model_name: gpt-5-mini-2025-08-07
+  temperature: 0.2
+  max_tokens: 512
+
+embeddings:
+  provider: openai   # huggingface | openai
+  model_name: text-embedding-3-small
+  input_path: data/docs  # Path to input documents or PDF
+
+vector_store:
+  type: Chroma    # Chroma | FAISS
+  persist_directory: data/docs
+
+retriever:
+  type: similarity
+  top_k: 5
+  fetch_k: 20
+  lambda_mult: 0.7

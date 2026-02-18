@@ -1,0 +1,17 @@
+langchain==1.2.6
+langchain-chroma==1.1.0
+langchain-classic==1.0.1
+langchain-community==0.3.30
+langchain-core==1.2.7
+langchain-huggingface==1.2.0
+langchain-openai==1.1.7
+langchain-text-splitters==1.1.0
+openai==1.109.1
+transformers==4.56.2
+sentence-transformers==5.1.1
+PyYAML==6.0.3
+dotenv==0.9.9
+python-dotenv==1.2.1
+pypdf==6.6.2
+streamlit==1.50.0
+streamlit-chat==0.1.1
