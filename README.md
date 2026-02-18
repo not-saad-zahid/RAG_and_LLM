@@ -32,10 +32,10 @@ llm:
 embeddings:
   provider: openai   # huggingface | openai
   model_name: model-name
-  input_path: Rag_project/data/docs  # Path to your PDFs
+  input_path: data/docs  # Path to your PDFs
 vector_store:
   type: Chroma
-  persist_directory: Rag_project/data/docs
+  persist_directory: data/docs
 retriever:
   type: mmr
   top_k: 5
@@ -44,7 +44,7 @@ retriever:
 ```
 
 ### 3. Add Your Documents
-Place your PDF files in the folder specified by `embeddings.input_path` (default: `Rag_project/data/docs`).
+Place your PDF files in the folder specified by `embeddings.input_path` (default: `data/docs`).
 
 ### 4. Run the App
 ```bash
